@@ -17,8 +17,7 @@ let register = (req, res, next) => {
   User.register({
     name: req.body.name,
     email: req.body.email,
-    username: req.body.username,
-    photo: req.body.photo
+    username: req.body.username
   }, req.body.password, (err, user) => {
     if (err) {
       res.render('index', { alert: 'Oh, snap! Your regisration was unsuccessfull!'})

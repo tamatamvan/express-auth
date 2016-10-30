@@ -1,0 +1,18 @@
+extends layout
+block content  
+  .container
+    .row
+      table.table.table-hover
+        thead
+          tr
+            th No.
+            th Name
+            th username
+            th Email
+        tbody
+          - for(var i = 0; i < users; i++)
+          tr
+            td #{i+1} 
+            td #{users[i].name}
+            td #{users[i].username}
+            td #{users[i].email}
