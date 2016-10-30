@@ -8,7 +8,7 @@ let all = (req, res, next) => {
     if (err) {
       console.log(err);
     } else {
-      res.render('all', users);
+      res.render('all', {users});
     }
   })
 }
@@ -69,8 +69,7 @@ let edit = (req, res, next) => {
     name: req.body.name,
     email: req.body.email,
     username: req.body.username,
-    password: req.body.password,
-    photo: req.body.photo
+    password: req.body.password
   }, (err, user) => {
     if (err) {
       console.log(err);
