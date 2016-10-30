@@ -8,7 +8,7 @@ let all = (req, res, next) => {
     if (err) {
       console.log(err);
     } else {
-      res.json(users);
+      res.render('all', users);
     }
   })
 }
